@@ -1,0 +1,34 @@
+## static configuration
+
+networks:
+  default:
+    external:
+      name: accu.dev
+
+entryPoints:
+  web:
+    address: ':80'
+  web-secure:
+    address: ':443'
+
+api:
+  insecure: true
+  debug: true
+
+# Configure a more verbose logging with TRACE or DEBUG level.
+log:
+  level: INFO
+
+
+# Dynamic configuration
+
+providers:
+  docker: {}
+  file:
+    filename: /etc/traefik/traefik.yml
+    watch: true
+
+tls:
+  certificates:
+    - certFile: /etc/traefik/ssl/traefik.crt
+      keyFile: /etc/traefik/ssl/traefik.key

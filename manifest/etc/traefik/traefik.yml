@@ -10,6 +10,9 @@ api:
   insecure: true
   debug: true
 
+serversTransport:
+  insecureSkipVerify: true
+
 # Configure a more verbose logging with TRACE or DEBUG level.
 log:
   level: INFO

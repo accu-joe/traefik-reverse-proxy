@@ -9,6 +9,7 @@ A reverse proxy for all of your containerisation needs!
 
 ## Run
 
+- `docker network create accu.dev`
 - `docker-compose up --build -d`
 
 ### Useful links

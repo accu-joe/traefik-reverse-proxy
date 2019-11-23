@@ -1,5 +1,10 @@
 version: "3"
 
+networks:
+  default:
+    external:
+      name: accu.dev
+
 services:
   web:
     container_name: reverse_proxy
@@ -14,7 +19,7 @@ services:
       - "443:443"
 
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./manifest/etc/traefik:/etc/traefik
 
     labels:

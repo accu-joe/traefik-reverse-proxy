@@ -1,9 +1,4 @@
-## static configuration
-
-networks:
-  default:
-    external:
-      name: accu.dev
+## Static configuration
 
 entryPoints:
   web:
